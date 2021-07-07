@@ -13,8 +13,6 @@
     'use strict';
 
     function approve() {
-        const a = $("a[href$='pull/2/files']");
-        $("a[href$='pull/2/files']")[0].click();
         var checkExist = setInterval(function () {
             const approveBtn = $("button[value='approve']");
             if (approveBtn.length) {
@@ -22,6 +20,7 @@
                 clearInterval(checkExist);
             }
         }, 100);
+        $("a[href$='pull/2/files']")[0].click();
     }
 
     $(() => {
