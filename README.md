@@ -1,4 +1,5 @@
 # approve-button
+Adds an Approve button the every tab of Pull Requests, no need to click 3 when it's only a rebase or some such
 
 ## Installation
 1. Install Tampermonkey extension
