@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Approve Button
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Adds an approve button
 // @author       ZsoltD
 // @match        https://github.com/*/pull/*
@@ -20,7 +20,8 @@
                 clearInterval(checkExist);
             }
         }, 100);
-        $("a[href$='pull/2/files']")[0].click();
+        const prUrlEnd = location.href.match(/pull\/\d+/)?.[0]
+        $(`a[href$='${prUrlEnd}/files']`)[0].click();
     }
 
     $(() => {
